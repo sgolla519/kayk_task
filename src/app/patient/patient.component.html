@@ -1,0 +1,209 @@
+<section class="mt-xl-0 mt-lg-0 mt-md-0 mt-sm-4 mt-xs-4">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="card flip">
+        <div class="card-header headerBgColor">
+          PATIENT DETAILS
+          <i class="fa fa-plus pull-right" style="font-size:24px"></i>
+          <i class="fa fa-edit pull-right" style="font-size:24px"></i>
+        </div>
+        <div class="card-body">
+          <form class="mb-2 mt-1" >
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+            <label class="ml-1 mt-1"> Name: </label>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mr-1">
+            <div class="form-group">
+             
+                <input type="text" formControlName="firstName" class="form-control"  placeholder="HARSHAL PATEL" 
+                
+                (chnage)="getName($event)"
+                formControlName="firstName" />
+            </div>
+            
+            <div *NgIf="valid">
+                Please Enter Valid Name
+                          </div>
+            </div>
+  
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+              <label class="ml-1"> DOB:11/12/1997</label>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                <label > Age : 22 </label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                  <label > Gender : M </label>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label class="ml-1"> Ins Type:CVSK</label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                      <label > Group : GCA165 </label>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <label > Rel : CHILD</label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                          <label class="ml-1"> Person Code: 02</label>
+                          </div>
+                          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                            <label > Address: 980 Prince </label>
+                            </div>
+            </div>
+            </form>
+        </div>
+      </div>
+      <div class="card flip">
+        <div class="card-header headerBgColor">
+          PRESCRIBER DETAILS
+          <i class="fa fa-plus pull-right" style="font-size:24px"></i>
+          <i class="fa fa-edit pull-right" style="font-size:24px"></i>
+        </div>
+        <div class="card-body">
+          <form class="mb-2 mt-1" >
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+            <label class="ml-1 mt-1"> Name: </label>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mr-1">
+            <div class="form-group">
+             
+                <input type="text" formControlName="firstName" class="form-control" placeholder="LEO TOLSTORY"  />
+            </div>
+            </div>
+  
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+              <label class="ml-1"> License:13564789</label>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                <label > Phone : 830-428-3026 </label>
+                </div>
+               
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label class="ml-1"> NPI: 5854973254</label>
+                    </div>
+                 
+                     
+                       
+                          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
+                            <label > Address: 7157 Court </label>
+                            </div>
+            </div>
+            </form>
+        </div>
+      </div>
+      <div class="card flip">
+        <div class="card-header headerBgColor">
+          DRUG DETAILS
+          <i class="fa fa-plus pull-right" style="font-size:24px"></i>
+          <i class="fa fa-edit pull-right" style="font-size:24px"></i>
+        </div>
+        <div class="card-body">
+          <form class="mb-2 mt-1" >
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+            <label class="ml-1 mt-1"> Name: </label>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mr-1">
+            <div class="form-group">
+             
+                <input type="text" formControlName="firstName" class="form-control" placeholder="ASPRIN 40MG TABLET"  />
+            </div>
+            </div>
+  
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+              <label class="ml-1"> NOC: 124578</label>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                <label > from: TABLET </label>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                  <label > Brand : CLP </label>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label class="ml-1"> AWP: 0.5</label>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                      <label > Cost : 0.5 </label>
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <label > PrUp : 0.6 </label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                          <label class="ml-1"> Size: 40</label>
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                            <label > Qcd: 25 </label>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                                <label > RxCost: 10 </label>
+                                </div>
+            </div>
+            </form>
+        </div>
+      </div>
+      </div>
+      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <div class="card flip">
+          <div class="card-header headerBgColor">
+            Rx DETAILS
+            <i class="fa fa-plus pull-right" style="font-size:24px"></i>
+          </div>
+          <div class="card-body">
+            <form class="mb-2 mt-1" >
+              <div class="row">
+                <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+              <label class="ml-1 mt-1"> Name: </label>
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mr-1">
+            <div class="form-group">
+               
+                  <input type="text" formControlName="firstName" class="form-control"  />
+              </div>
+              </div> -->
+    
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                <label class="ml-1"> Bill To:</label>
+                <input type="text" formControlName="firstName" class="form-control"  placeholder="CASH" />
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+           <label class="ml-1"> ICU:</label>
+                  <input type="text" formControlName="firstName" class="form-control"  placeholder="0" />
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label class="ml-1"> Fill Date:</label>
+                    <input type="text" formControlName="firstName" class="form-control"  placeholder="21/06/018" />
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <label class="ml-1"> Fill No:</label>
+                        <input type="text" formControlName="firstName" class="form-control"  placeholder="0" />
+                      </div>
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                        <label class="ml-1"> Delivery:</label>
+                <input type="text" formControlName="firstName" class="form-control"  placeholder="SHIP" />
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                            <label class="ml-1"> DAW:</label>
+                            <input type="text" formControlName="firstName" class="form-control"  placeholder="OVERRIDE" />
+                          </div>
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                            <label class="ml-1"> UCM:</label>
+                            <input type="text" formControlName="firstName" class="form-control"  placeholder="EACH" />
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                                <label class="ml-1"> SIG:</label>
+                                <input type="text" formControlName="firstName" class="form-control"  placeholder="1G" />
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                                <label class="ml-1"> Qty Dsp:</label>
+                <input type="text" formControlName="firstName" class="form-control"  placeholder="10" />
+                                  </div>
+              </div>
+              </form>
+          </div>
+        </div>
+        </div>
+    </div>
+  </section>

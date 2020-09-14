@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "patientDetals"
+    }
+  },
+  "defaultProject": "patientDetals",
+  "cli": {
+    "analytics": "9b4b8791-a5a6-4974-8092-978f03085c23"
+  }
 }
