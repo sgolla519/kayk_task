@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PatientComponent } from './patient/patient.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminService} from './admin.service';
+
+import { HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +19,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

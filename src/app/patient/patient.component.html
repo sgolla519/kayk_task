@@ -21,7 +21,7 @@
                 
                 
                 formControlName="firstName"  /> -->
-    <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+    <input type="text" class="form-control" id="name" required [(ngModel)]="patientData['name']" name="name"
        #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
             </div>
             
@@ -35,49 +35,49 @@
               <label><b>DOB</b> </label>
               </div>
               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                <label> 11/12/1997</label>
+                <label> {{patientData.dob}}</label>
                 </div>
               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                 <label><b>Age</b> </label>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                    <label> 22</label>
+                    <label> {{patientData.age}}</label>
                     </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                   <label ><b>Gender</b> </label>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                    <label> Male</label>
+                    <label> {{patientData.gender}}</label>
                     </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                     <label> <b>InsType</b></label>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                        <label> CVSK</label>
+                        <label> {{patientData.insType}}</label>
                         </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                       <label > <b>Group</b> </label>
                       </div>
                       <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                        <label> GCA165</label>
+                        <label> {{patientData.group}}</label>
                         </div>
                       <div class="col-xl-2 col-lg-2 col-md-42col-sm-12 col-xs-12 ">
                         <label ><b>Rel</b> </label>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <label > CHILD</label>
+                            <label > {{patientData.rel}}</label>
                             </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                           <label> <b>PersonCode</b></label>
                           </div>
                           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <label> 02</label>
+                            <label> {{patientData.personCode}}</label>
                             </div>
                           <div class="col-xl-2 col-lg- col-md-2 col-sm-12 col-xs-12 ">
                             <label ><b>Address</b> </label>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                                <label>980 Prince</label>
+                                <label>{{patientData.address}}</label>
                                 </div>
             </div>
             </form>
@@ -101,7 +101,7 @@
             <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-xs-12 mr-1">
                 <div class="form-group">
 
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+        <input type="text" class="form-control" id="name" required [(ngModel)]="perscriberData.name" name="name"
            #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
                 </div>
                 
@@ -116,26 +116,26 @@
               <label> <b>License</b></label>
               </div>
               <div class="col-xl- col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                <label class="ml-1"> 13564789</label>
+                <label class="ml-1"> {{perscriberData.license}}}</label>
                 </div>
               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                 <label > <b>Phone</b>  </label>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                    <label> 13564789</label>
+                    <label> {{perscriberData.phone}}</label>
                     </div>
 
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                         <label> <b>NPI</b></label>
                         </div>
                         <div class="col-xl- col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                          <label class="ml-1"> 13564789</label>
+                          <label class="ml-1"> {{perscriberData.npi}}</label>
                           </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                           <label > <b>DEA</b>  </label>
                           </div>
                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                              <label> 13564789</label>
+                              <label> {{perscriberData.dea}}</label>
                               </div>
 
 
@@ -147,7 +147,7 @@
                             <label> <b>Address</b></label>
                             </div>
                           <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
-                            <label >7157 Court </label>
+                            <label >{{perscriberData.address}} </label>
                             </div>
             </div>
             </form>
@@ -177,7 +177,7 @@
                     
                     
                     formControlName="firstName"  /> -->
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"
+        <input type="text" class="form-control" id="name" required [(ngModel)]="drugData.name" name="name"
            #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
                 </div>
                 
@@ -191,57 +191,57 @@
               <label><b>NOC</b> </label>
               </div>
               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                <label>124578</label>
+                <label>{{drugData.noc}}</label>
                 </div>
               <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                 <label > <b>from</b> </label>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                    <label>124578</label>
+                    <label>{{drugData.from}}</label>
                     </div>
                 
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                   <label > <b>Brand</b></label>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                    <label >  CLP </label>
+                    <label >  {{drugData.brand}} </label>
                     </div>
                   <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                     <label > <b>AWP</b></label>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                        <label > 0.5 </label>
+                        <label > {{drugData.awp}} </label>
                         </div>
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                       <label > <b>Cost</b> </label>
                       </div>
                       <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                        <label > 0.5 </label>
+                        <label > {{drugData.cost}} </label>
                         </div>
                       <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                         <label > <b>PrUp</b>  </label>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <label >  0.6 </label>
+                            <label >  {{drugData.prup}} </label>
                             </div>
                         
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                           <label> <b>Size</b></label>
                           </div>
                           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                            <label >  0.6 </label>
+                            <label >  {{drugData.size}} </label>
                             </div>
                           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                             <label > <b>Qcd</b> </label>
                             </div>
                             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                                <label > 25 </label>
+                                <label > {{drugData.qcd}} </label>
                                 </div>
                             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
                                 <label > <b>RxCost</b> </label>
                                 </div>
                                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
-                                    <label > 10 </label>
+                                    <label > {{drugData.rxcost}} </label>
                                     </div>
             </div>
             </form>

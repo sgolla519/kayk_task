@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService} from '../admin.service';
 
 @Component({
   selector: 'app-patient',
@@ -9,15 +10,25 @@ export class PatientComponent implements OnInit {
 
   firstName="PATEL";
 
+  patientData: any;
+
+  drugData: any;
+
+  perscriberData: any;
+
   valid = false;
 
   model = {
     name:"Srinivas"
   }
 
-  constructor() { }
+  constructor(private admin: AdminService) { }
 
   ngOnInit(): void {
+
+    this.getData();
+    this.getDrugData();
+    this.getPrscriberData();
   }
 
 
@@ -34,6 +45,35 @@ this.valid = true;
       this.valid = false;
     }
 
+
+
+  }
+
+  getData(){
+    this.admin.getPatientDetails().subscribe((res)=>{
+      this.patientData = res['data'][0];
+
+      console.log("display data", this.patientData);
+
+    })
+  }
+
+  getDrugData(){
+    this.admin.getDrugDetails().subscribe((res)=>{
+      this.drugData = res['data'][0];
+
+      console.log("display data", this.drugData);
+
+    })
+  }
+
+  getPrscriberData(){
+    this.admin.getPerscriberDetails().subscribe((res)=>{
+      this.perscriberData = res['data'][0];
+
+      console.log("display data", this.perscriberData);
+
+    })
   }
 
 
