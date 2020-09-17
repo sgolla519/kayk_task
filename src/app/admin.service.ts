@@ -21,5 +21,9 @@ export class AdminService {
     return this.http.get('http://localhost:3000/prescriber/get');
   }
 
+  getRxDetails(){
+    return this.http.get('http://localhost:3000/rx/get')
+  }
+
 
 }

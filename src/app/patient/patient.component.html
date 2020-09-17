@@ -251,7 +251,34 @@
       <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <div class="card flip">
           <div class="card-header headerBgColor">
+            <div class="row">
             Rx DETAILS
+           
+              
+                
+                  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12  ">
+                    <input type="checkbox"  class="form-control"  placeholder="CASH" />
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 ">
+                        <label> BillTo</label>
+                      </div>
+
+
+                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12 ">
+                            <label> OrderedDate</label>
+                          </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12  ">
+                        <input type="text"  class="form-control"  placeholder="CASH"  class="tetxbox" />
+                        </div>
+
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12 ml-3">
+                            <label> RefilQty</label>
+                          </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12  ">
+                        <input type="text"  class="form-control"  placeholder="CASH" class="tetxbox" />
+                        </div>
+                       
+            </div>
             <i class="fa fa-plus pull-right" style="font-size:12px"></i>
           </div>
           <div class="card-body">
@@ -265,15 +292,35 @@
               </div>
             
               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12  ">
-                <input type="text"  class="form-control"  placeholder="CASH" />
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.billTo" name="name"
+                       #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                            </div>
+                            
+                            <div *ngIf="valid"
+                            class="alert alert-danger">
+                         Name is required
+                       </div>
                 </div>
+
+              
                 
           
                  <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12">
                     <label class="ml-1"> IOU</label>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                    <input type="text"  class="form-control"  placeholder="0" />
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.iou" name="name"
+                           #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                </div>
+                                
+                                <div *ngIf="valid"
+                                class="alert alert-danger">
+                             Name is required
+                           </div>
                     </div>
 
                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
@@ -281,7 +328,16 @@
                       </div>
                     
                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3 ">
-                        <input type="text"  class="form-control"  placeholder="21/8/2018" />
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.fillDate" name="name"
+                               #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                    </div>
+                                    
+                                    <div *ngIf="valid"
+                                    class="alert alert-danger">
+                                 Name is required
+                               </div>
                         </div>
                         
                   
@@ -289,7 +345,16 @@
                             <label class="ml-1"> Fill No</label>
                           </div>
                           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                            <input type="text"  class="form-control"  placeholder="0" />
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.fillNo" name="name"
+                                   #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                        </div>
+                                        
+                                        <div *ngIf="valid"
+                                        class="alert alert-danger">
+                                     Name is required
+                                   </div>
                             </div>
 
                             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
@@ -297,7 +362,16 @@
                               </div>
                             
                               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3 ">
-                                <input type="text"  class="form-control"  placeholder="TRANSFERS" />
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.rxType" name="name"
+                                       #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                            </div>
+                                            
+                                            <div *ngIf="valid"
+                                            class="alert alert-danger">
+                                         Name is required
+                                       </div>
                                 </div>
                                 
                           
@@ -305,14 +379,32 @@
                                     <label class="ml-1">DAW</label>
                                   </div>
                                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                    <input type="text"  class="form-control"  placeholder="OVERRIDE" />
+                                    <div class="form-group">
+
+                                        <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.daw" name="name"
+                                           #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                </div>
+                                                
+                                                <div *ngIf="valid"
+                                                class="alert alert-danger">
+                                             Name is required
+                                           </div>
                                     </div>
                                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
                                         <label class="ml-1"> SIG</label>
                                       </div>
                                     
                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12  mt-3">
-                                        <input type="text"  class="form-control"  placeholder="1G" />
+                                        <div class="form-group">
+
+                                            <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.sig" name="name"
+                                               #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                    </div>
+                                                    
+                                                    <div *ngIf="valid"
+                                                    class="alert alert-danger">
+                                                 Name is required
+                                               </div>
                                         </div>
                                         
                                   
@@ -320,27 +412,63 @@
                                             <label class="ml-1"> Qty Dsp</label>
                                           </div>
                                           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                            <input type="text"  class="form-control"  placeholder="10" />
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.qtyDsp" name="name"
+                                                   #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                        </div>
+                                                        
+                                                        <div *ngIf="valid"
+                                                        class="alert alert-danger">
+                                                     Name is required
+                                                   </div>
                                             </div>
 
                                             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
                                                 <label class="ml-1"> SIG Descr</label>
                                               </div>
                                               <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12 mt-3">
-                                                <input type="text"  class="form-control"  placeholder="TAKE ONE TABLET A DAY" />
+                                                <div class="form-group">
+
+                                                    <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.sigDescr" name="name"
+                                                       #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                            </div>
+                                                            
+                                                            <div *ngIf="valid"
+                                                            class="alert alert-danger">
+                                                         Name is required
+                                                       </div>
                                                 </div>
                                                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
                                                     <label class="ml-1">Note</label>
                                                   </div>
                                                   <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12 col-xs-12 mt-3">
-                                                    <input type="text"  class="form-control"  placeholder="" />
+                                                    <div class="form-group">
+
+                                                        <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.note" name="name"
+                                                           #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                </div>
+                                                                
+                                                                <div *ngIf="valid"
+                                                                class="alert alert-danger">
+                                                             Name is required
+                                                           </div>
                                                     </div>
 
                                                     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-xs-12 mt-3">
                                                         <label class="ml-1"> AWP price</label>
                                                       </div>
                                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                                        <input type="text"  class="form-control"  placeholder="5.00" />
+                                                        <div class="form-group">
+
+                                                            <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.awpPrice" name="name"
+                                                               #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                    </div>
+                                                                    
+                                                                    <div *ngIf="valid"
+                                                                    class="alert alert-danger">
+                                                                 Name is required
+                                                               </div>
                                                         </div>
                                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                                                             <label class="ml-1"> Acq pricet</label>
@@ -349,7 +477,16 @@
                                                             <label class="ml-1"> Price</label>
                                                           </div>
                                                           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                                            <input type="text"  class="form-control"  placeholder="5.0" />
+                                                            <div class="form-group">
+
+                                                                <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.price" name="name"
+                                                                   #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                        </div>
+                                                                        
+                                                                        <div *ngIf="valid"
+                                                                        class="alert alert-danger">
+                                                                     Name is required
+                                                                   </div>
                                                             </div>
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                                                                 <label class="ml-1"> Cash Price</label>
@@ -358,7 +495,16 @@
                                                                 <label class="ml-1"> Pharmacy fee</label>
                                                               </div>
                                                               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                                                <input type="text"  class="form-control"  placeholder="5" />
+                                                                <div class="form-group">
+
+                                                                    <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.PharmacyFee" name="name"
+                                                                       #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                            </div>
+                                                                            
+                                                                            <div *ngIf="valid"
+                                                                            class="alert alert-danger">
+                                                                         Name is required
+                                                                       </div>
                                                                 </div>
                                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                                                                     <label class="ml-1">Ins Dispencing</label>
@@ -367,7 +513,16 @@
                                                                     <label class="ml-1"> U$C</label>
                                                                   </div>
                                                                   <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                                                    <input type="text"  class="form-control"  placeholder="5" />
+                                                                    <div class="form-group">
+
+                                                                        <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.u$c" name="name"
+                                                                           #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                                </div>
+                                                                                
+                                                                                <div *ngIf="valid"
+                                                                                class="alert alert-danger">
+                                                                             Name is required
+                                                                           </div>
                                                                     </div>
                                                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                                                                         <label class="ml-1">Patient Pay</label>
@@ -376,7 +531,16 @@
                                                                         <label class="ml-1">Billed</label>
                                                                       </div>
                                                                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-3">
-                                                                        <input type="text"  class="form-control"  placeholder="10.0" />
+                                                                        <div class="form-group">
+
+                                                                            <input type="text" class="form-control" id="name" required [(ngModel)]="rxData.billed" name="name"
+                                                                               #name="ngModel" style="font-size: 10px;" (change)="getName($event); heroForm.reset()">
+                                                                                    </div>
+                                                                                    
+                                                                                    <div *ngIf="valid"
+                                                                                    class="alert alert-danger">
+                                                                                 Name is required
+                                                                               </div>
                                                                         </div>
                                                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mt-3">
                                                                             <label class="ml-1"> Insurance Total</label>

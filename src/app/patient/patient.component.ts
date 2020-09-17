@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService} from '../admin.service';
 
 @Component({
-  selector: 'app-patient',
+    selector: 'app-patient',
     templateUrl: './patient.component.html',
-  styleUrls: ['./patient.component.scss']
+    styleUrls: ['./patient.component.scss']
 })
 export class PatientComponent implements OnInit {
 
@@ -15,6 +15,8 @@ export class PatientComponent implements OnInit {
   drugData: any;
 
   perscriberData: any;
+
+  rxData: any;
 
   valid = false;
 
@@ -29,6 +31,7 @@ export class PatientComponent implements OnInit {
     this.getData();
     this.getDrugData();
     this.getPrscriberData();
+    this.getRxData();
   }
 
 
@@ -72,6 +75,15 @@ this.valid = true;
       this.perscriberData = res['data'][0];
 
       console.log("display data", this.perscriberData);
+
+    })
+  }
+
+  getRxData(){
+    this.admin.getRxDetails().subscribe((res)=>{
+      this.rxData = res['data'][0];
+
+      console.log("display data", this.rxData);
 
     })
   }
